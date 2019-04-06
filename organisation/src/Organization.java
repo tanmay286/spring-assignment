@@ -13,18 +13,25 @@ public class Organization {
 	private Address address;
 	private List<String> directors;
 	private Set<String> branches;
-	private Map<String, String> branchWiseHead;
+//	private Map<String, String> branchWiseHead;
+	private Map<String, String> branchHead;
 	private Properties ipAddresses;
 	private Properties databaseDetails;
 	public Organization() {
 		super();
 	}
 	
-	public Organization(int orgId, String orgName, double marketPrice) {
+	public Organization(int orgId, String orgName, double marketPrice , Address address ,List<String> directors, Set<String> branches, Map<String, String> branchHead, Properties ipAddresses , Properties databaseDetails) {
 		super();
 		this.orgId = orgId;
 		this.orgName = orgName;
 		this.marketPrice = marketPrice;
+		this.address = address;
+		this.directors = directors;
+		this.branches = branches;
+		this.branchHead = branchHead;
+		this.ipAddresses = ipAddresses;
+		this.databaseDetails = databaseDetails;
 	}
 	
 	/*public Organization(int orgId, String orgName, double marketPrice, Address address, List<String> directors,
@@ -89,6 +96,7 @@ public class Organization {
 	public void setBranches(Set<String> branches) {
 		this.branches = branches;
 	}
+/*
 	
 	public Map<String, String> getBranchWiseHead() {
 		return branchWiseHead;
@@ -98,6 +106,14 @@ public class Organization {
 		this.branchWiseHead = branchWiseHead;
 	}
 	
+*/
+	public Map<String, String> getBranchHead() {
+		return branchHead;
+	}
+	public void setBranchHead(Map<String, String> branchHead) {
+		this.branchHead = branchHead;
+	}
+
 	public Properties getIpAddresses() {
 		return ipAddresses;
 	}
@@ -114,14 +130,9 @@ public class Organization {
 		this.databaseDetails = databaseDetails;
 	}
 	
-	
-	/*@Override
+	@Override
 	public String toString() {
-		return "Organization [orgId=" + orgId + ", orgName=" + orgName + ", marketPrice=" + marketPrice + "]";
-	}*/
+		return "Organization [orgId=" + orgId + ", orgName=" + orgName + ", marketPrice=" + marketPrice + ", address =" + address + ", directors= " + directors + ", branches=" + branches + " , branchHead=" + branchHead + " , ipAddress = " + ipAddresses + " , databaseDetails = " + databaseDetails + "]";
+	}
 	
-	
-	
-	
-
 }

@@ -1,38 +1,47 @@
 package com.capgemini.spring.organization;
+import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Value;
 
-public class Address {
+
+public class AddressConfig {
 	
-	private int doorNumber;
-	private String Street;
+	
+	private String doorNumber;
+
+	
+	private String street;
+
 	private String cityName;
+
+	
 	private String state;
-	private int pincode;
-	public Address() {
+
+
+	public AddressConfig() {
 		super();
 	}
-	public Address(int doorNumber, String street, String cityName, String state, int pincode) {
+	public AddressConfig(String doorNumber, String street, String cityName, String state ) {
 		super();
 		this.doorNumber = doorNumber;
-		Street = street;
+		this.street = street;
 		this.cityName = cityName;
 		this.state = state;
-		this.pincode = pincode;
 	}
 
-	public int getDoorNumber() {
+	public String getDoorNumber() {
 		return doorNumber;
 	}
 
-	public void setDoorNumber(int doorNumber) {
+	public void setDoorNumber(String doorNumber) {
 		this.doorNumber = doorNumber;
 	}
 
 	public String getStreet() {
-		return Street;
+		return street;
 	}
 
 	public void setStreet(String street) {
-		Street = street;
+		this.street = street;
 	}
 
 	public String getCityName() {
@@ -51,18 +60,10 @@ public class Address {
 		this.state = state;
 	}
 
-	public int getPincode() {
-		return pincode;
-	}
-
-	public void setPincode(int pincode) {
-		this.pincode = pincode;
-	}
 
 	@Override
 	public String toString() {
-		return "Address [doorNumber=" + doorNumber + ", Street=" + Street + ", cityName=" + cityName + ", state="
-				+ state + ", pincode=" + pincode + "]";
+		return "doorNumber=" + doorNumber + ", Street=" + street + ", CityName=" + cityName + ", State=" + state;
 	}
 	
 

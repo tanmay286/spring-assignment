@@ -4,12 +4,12 @@ import com.capgemini.spring.organization.*;
 import org.springframework.context.*;
 import org.springframework.context.support.*;
 
-public class Test{
+public class TestAnnotation{
 
 	public static void main(String args[]){
 	
-		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-		Organization organization =(Organization) context.getBean("details");
+		ApplicationContext context = new ClassPathXmlApplicationContext("index.xml");
+		OrganizationAnnotation organization =context.getBean(OrganizationAnnotation.class);
 		System.out.println("Welcome to organization");
 		System.out.println(organization.toString());
 	}

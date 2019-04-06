@@ -6,3 +6,13 @@ spring-demo/libs
 
 springeagerandlazy/bin
 springeagerandlazy/libs
+
+organisation/.git
+organisation/bin
+organisation/libs
+
+organisationAnnotation/bin
+organisationAnnotation/libs
+
+organisationConfig/bin
+organisationConfig/libs
