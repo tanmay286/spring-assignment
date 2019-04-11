@@ -16,3 +16,10 @@ organisationAnnotation/libs
 
 organisationConfig/bin
 organisationConfig/libs
+
+bank-app-jdbc-xml
+bank-app-jdbc-using-annotation
+bank-app-jdbc-javaConfiguration
+
+spring-demo
+
